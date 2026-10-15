@@ -1,0 +1,46 @@
+# Docker Compose for local development environment
+# Run: docker compose up -d
+# Stop: docker compose down
+
+services:
+  # ---------------------------------------------------------------------------
+  # Primary Relational Database: PostgreSQL 16
+  # ---------------------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    container_name: awesome-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: awesome_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d awesome_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # Mock SMTP Server & Web Mailbox: Mailpit
+  # Captures all outgoing emails from Spring Boot during development.
+  # View emails in your browser at: http://localhost:8025
+  # SMTP endpoint for backend: localhost:1025
+  # ---------------------------------------------------------------------------
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: awesome-mailpit
+    restart: unless-stopped
+    ports:
+      - "1025:1025"   # SMTP port (used by Spring Mail)
+      - "8025:8025"   # Web UI dashboard
+    environment:
+      MP_MAX_MESSAGES: 500
+      MP_DATABASE: ""  # In-memory storage for local dev
+
+volumes:
+  postgres_data:
+    driver: local

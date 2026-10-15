@@ -1,0 +1,2 @@
+com.awesome.kit.core.diagnostics.DatabaseFailureAnalyzer
+com.awesome.kit.core.diagnostics.FlywayMismatchFailureAnalyzer

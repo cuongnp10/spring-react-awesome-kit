@@ -1,0 +1,41 @@
+{
+  "name": "create-spring-react-kit",
+  "version": "1.0.0",
+  "description": "Interactive CLI scaffolder for Spring Boot + React Awesome Kit",
+  "type": "module",
+  "bin": {
+    "create-spring-react-kit": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "spring-boot",
+    "react",
+    "fullstack",
+    "scaffolder",
+    "cli",
+    "vite",
+    "hexagonal",
+    "clean-architecture"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.8.2",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "kolorist": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.14.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  }
+}
