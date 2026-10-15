@@ -11,7 +11,7 @@ import path from 'node:path';
 const program = new Command();
 
 program
-  .name('create-spring-react-kit')
+  .name('spring-react-awesome-kit')
   .description('Interactive CLI Scaffolder for Spring Boot + React Awesome Kit')
   .version('1.0.0')
   .argument('[project-name]', 'Name of the project directory')

@@ -1,10 +1,11 @@
 {
-  "name": "create-spring-react-kit",
+  "name": "spring-react-awesome-kit",
   "version": "1.0.0",
-  "description": "Interactive CLI scaffolder for Spring Boot + React Awesome Kit",
+  "description": "Interactive CLI scaffolder for Spring Boot & React Awesome Kit",
   "type": "module",
   "bin": {
-    "create-spring-react-kit": "./dist/index.js"
+    "spring-react-awesome-kit": "./dist/index.js",
+    "create-spring-react-awesome-kit": "./dist/index.js"
   },
   "files": [
     "dist"
@@ -23,7 +24,8 @@
     "cli",
     "vite",
     "hexagonal",
-    "clean-architecture"
+    "clean-architecture",
+    "spring-react-awesome-kit"
   ],
   "license": "MIT",
   "dependencies": {

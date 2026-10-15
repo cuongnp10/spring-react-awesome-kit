@@ -1,4 +1,4 @@
-# create-spring-react-kit
+# spring-react-awesome-kit
 
 > Interactive CLI Scaffolder for the **Spring Boot & React Awesome Starter Kit**.
 
@@ -11,13 +11,7 @@ Initialize a production-ready, fullstack application combining **Spring Boot 3.4
 Run via `npx` (zero installation required):
 
 ```bash
-npx create-spring-react-kit
-```
-
-Or with `npm`:
-
-```bash
-npm create spring-react-kit@latest
+npx spring-react-awesome-kit
 ```
 
 ---
@@ -40,13 +34,13 @@ You can also pass arguments directly:
 
 ```bash
 # Academic Layered
-npx create-spring-react-kit my-app --arch layered
+npx spring-react-awesome-kit my-app --arch layered
 
 # Feature-Sliced
-npx create-spring-react-kit my-app --arch feature
+npx spring-react-awesome-kit my-app --arch feature
 
 # Modern Hexagonal
-npx create-spring-react-kit my-app --arch hexagonal
+npx spring-react-awesome-kit my-app --arch hexagonal
 ```
 
 ---
