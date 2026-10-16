@@ -25,6 +25,11 @@ This document specifies mandatory execution rules, architectural patterns, and w
 * When diagnosing run errors (missing `.env` keys, DB unreachable, Flyway checksum mismatch), follow the prescribed resolution steps.
 * All error messages and logs must be pure English, concise, and free of icons or emojis.
 
+### 1.4. Conversational Protocol (No Redundant Summaries)
+* **DO NOT summarize completed steps or re-explain what you just coded** unless the user explicitly asks for a summary.
+* Keep chat responses minimal and pragmatic.
+* Always end the turn with a focused, actionable question regarding the next step instead of executing end-to-end blindly.
+
 ---
 
 ## 2. Core Architectural Pillars
