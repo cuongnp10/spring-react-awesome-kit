@@ -30,6 +30,11 @@ This document specifies mandatory execution rules, architectural patterns, and w
 * Keep chat responses minimal and pragmatic.
 * Always end the turn with a focused, actionable question regarding the next step instead of executing end-to-end blindly.
 
+### 1.5. No Unprompted Test Execution
+* Detailed protocol: [no-unprompted-tests.md](no-unprompted-tests.md).
+* **NEVER execute test suites** (`mvn test`, `npm test`, `vitest`, `playwright`) unless explicitly requested by the user.
+* For code and type verification, use non-executing checks only: `mvn test-compile` (backend) or `npx tsc --noEmit` / `npm run build` (frontend).
+
 ---
 
 ## 2. Core Architectural Pillars
